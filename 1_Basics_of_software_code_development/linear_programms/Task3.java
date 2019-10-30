@@ -11,8 +11,8 @@ public class Task3 {
     public static void main(String[] args) {
         Scanner scn = new Scanner(System.in);
         System.out.println("Insert x,y");
-        int x = scn.nextInt();
-        int y = scn.nextInt();
+        double x = scn.nextInt();
+        double y = scn.nextInt();
         double numerator = Math.sin(x) + Math.cos(y);
         double denominator = Math.cos(x) - Math.sin(y);
         double fraction = numerator / denominator;
