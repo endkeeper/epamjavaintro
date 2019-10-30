@@ -14,7 +14,7 @@ public class Task6 {
         System.out.println("Inset (x,y)");
         int x = scn.nextInt();
         int y = scn.nextInt();
-        boolean firstRectangle = (y >= -3 && y <= 4 && x >= -2 && x <= 2);
+        boolean firstRectangle = (y >= 0 && y <= 4 && x >= -2 && x <= 2);
         boolean secondRectangle = (y >= -3 && y <= 0 && x >= -4 && x <= 4);
         if (firstRectangle || secondRectangle) {
             System.out.println("True");
