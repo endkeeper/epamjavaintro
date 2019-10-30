@@ -1,5 +1,7 @@
-// Вычислить значение выражения по формуле(все переменные принимают действительные значения)
-// (sinx + cosy)/(cosx-siny)*tgxy
+/*
+Вычислить значение выражения по формуле(все переменные принимают действительные значения)
+(sinx + cosy)/(cosx-siny)*tgxy
+*/
 
 import java.util.Scanner;
 
@@ -9,7 +11,7 @@ public class Task3 {
         System.out.println("Insert x,y");
         int x = scn.nextInt();
         int y = scn.nextInt();
-        double Result = (Math.sin(x) + Math.cos(y)) / (Math.cos(x) - Math.sin(y)) * Math.tan(x * y);
-        System.out.printf("Result: " + "%.1f", Result);
+        double result = (Math.sin(x) + Math.cos(y)) / (Math.cos(x) - Math.sin(y)) * Math.tan(x * y);
+        System.out.printf("Result: " + "%.1f", result);
     }
 }

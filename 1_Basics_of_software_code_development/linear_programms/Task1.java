@@ -1,6 +1,8 @@
-// Найдите значение функции z = ( (a - 3) * b / 2 ) + c
-
 import java.util.Scanner;
+
+/*
+Найдите значение функции z = ( (a - 3) * b / 2 ) + c
+ */
 
 public class Task1 {
     public static void main(String[] args) {
@@ -8,7 +10,7 @@ public class Task1 {
         System.out.println("Введите a");
         int a = scn.nextInt();
         System.out.println("Введите b");
-        float b = scn.nextFloat();
+        int b = scn.nextInt();
         System.out.println("Введите c");
         int c = scn.nextInt();
         float z = ((a - 3) * b / 2) + c;
