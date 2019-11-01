@@ -20,7 +20,10 @@ public class Task3 {
         float y3 = scn.nextFloat();
         boolean xLine = x1 == x2 && x1 == x3;
         boolean yLine = y1 == y2 && y1 == y3;
-        if (xLine || yLine) {
+        boolean yDiagonal = y3 % y1 == y2 % y1;
+        boolean xDiagonal = x3 % x1 == x2 % x1;
+        boolean xyLine = xDiagonal && yDiagonal;
+        if (xLine || yLine || xyLine) {
             System.out.println("Points on same line");
         } else {
             System.out.println("Points not on same line");

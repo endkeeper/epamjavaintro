@@ -13,8 +13,8 @@ public class Task1 {
         System.out.println("Enter the angles");
         int x = scn.nextInt();
         int y = scn.nextInt();
-
-        if (x + y >= 180) {
+        int sum = x + y;
+        if (sum >= 180) {
             System.out.println("Triangle is not exist");
         } else if (x + y == 90) {
             System.out.println("Triangle is right-angled");
