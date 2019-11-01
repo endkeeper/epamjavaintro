@@ -12,7 +12,7 @@ public class Task1 {
         System.out.println("Введите a");
         int a = scn.nextInt();
         System.out.println("Введите b");
-        int b = scn.nextInt();
+        float b = scn.nextInt();
         System.out.println("Введите c");
         int c = scn.nextInt();
         float z = ((a - 3) * b / 2) + c;
