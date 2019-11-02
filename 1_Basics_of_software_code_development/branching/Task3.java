@@ -11,9 +11,9 @@ public class Task3 {
         int statement1 = (x1 - x2) * (y3 - y2);
         int statement2 = (x3 - x2) * (y1 - y2);
         if (statement1 == statement2) {
-            System.out.println("True");
+            System.out.println("points on same lines");
         } else {
-            System.out.println("False");
+            System.out.println("points on different lines");
         }
     }
 }
