@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 /**
  * Вычислить значение выражения по формуле(все переменные принимают действительные значения)
- * (sinx + cosy)/(cosx-siny)*tgxy
+ * (sinx + cosy)/(cosx-siny)*tgxy.
  */
 
 public class Task3 {

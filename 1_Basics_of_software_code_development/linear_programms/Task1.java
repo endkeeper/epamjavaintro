@@ -3,7 +3,7 @@ package linear_programms;
 import java.util.Scanner;
 
 /**
- * Найдите значение функции z = ( (a - 3) * b / 2 ) + c.
+ * Найдите значение функции z = ( (a - 3) * b / 2 ) + c
  */
 
 public class Task1 {
