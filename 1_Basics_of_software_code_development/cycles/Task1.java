@@ -12,22 +12,14 @@ public class Task1 {
         Scanner scn = new Scanner(System.in);
         System.out.println("Enter number");
         int number = scn.nextInt();
-        boolean flag = false;
-        if (number > 0) {
-            flag = true;
-        } else {
-            System.out.println("Incorrect number. Number > 0");
-        }
         int result = 0;
-
-        while (flag == true) {
-            for (int i = 0; i <= number; i++) {
-                result += i;
-                if (i == number) {
-                    flag = false;
-                }
-            }
-            System.out.println("Result: " + result);
+        while (number < 0) {
+            System.out.println("Enter number again. Number>0");
+            number = scn.nextInt();
         }
+        for (int i = 1; i <= number; i++) {
+            result += i;
+        }
+        System.out.println("Result: " + result);
     }
 }

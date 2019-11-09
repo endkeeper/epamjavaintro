@@ -14,14 +14,10 @@ public class Task5 {
     static void pos(double e) {
         double sum = 0;
         int n = 1;
-        boolean check = true;
-        while (check == true) {
-            double an = (1 / Math.pow(2, n)) + (1 / Math.pow(3, n));
-            if (Math.abs(an) >= e) {
-                sum += an;
-            } else {
-                check = false;
-            }
+        double an = (1 / Math.pow(2, n)) + (1 / Math.pow(3, n));
+        while (Math.abs(an) >= e) {
+            an = (1 / Math.pow(2, n)) + (1 / Math.pow(3, n));
+            sum += an;
             n++;
         }
         System.out.println(sum);
