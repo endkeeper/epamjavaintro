@@ -1,21 +1,16 @@
-package branching;
-
-import java.util.Scanner;
-
 /**
- * Найти max[{min(a,b), mic(c,d)}
+ * Найти max{min(a,b), min(c,d)}
  */
 
 public class Task2 {
     public static void main(String[] args) {
-        Scanner scn = new Scanner(System.in);
-        System.out.println("Enter numbers a,b,c,d");
-        int a = scn.nextInt();
-        int b = scn.nextInt();
-        int c = scn.nextInt();
-        int d = scn.nextInt();
+        result(4, 3, 1, 4);
+    }
+
+    static void result(int a, int b, int c, int d) {
         int min1;
         int min2;
+        int max;
 
         if (a > b) {
             min1 = b;
@@ -29,10 +24,12 @@ public class Task2 {
             min2 = c;
         }
 
-        if (min1 > min2) {
-            System.out.println("Max: " + min1);
+        if (min2 > min1) {
+            max = min2;
         } else {
-            System.out.println("Max: " + min2);
+            max = min1;
         }
+
+        System.out.println("result is " + max);
     }
 }

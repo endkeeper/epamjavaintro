@@ -1,25 +1,21 @@
-package branching;
-
-import java.util.Scanner;
-
 /**
- * Даны два угла треугольника( в градусах). Определить, существует ли такой треугольник, и если да, то будет
- * ли он прямоугольным
+ * Даны два угла треугольника. Определить, сущетсвует ли такой треугольник и если да,
+ * является ли он прямоугольным
  */
 
 public class Task1 {
     public static void main(String[] args) {
-        Scanner scn = new Scanner(System.in);
-        System.out.println("Enter the angles");
-        int x = scn.nextInt();
-        int y = scn.nextInt();
+        triangle(45, 45);
+    }
 
-        if (x + y >= 180) {
-            System.out.println("Triangle is not exist");
-        } else if (x + y == 90) {
-            System.out.println("Triangle is right-angled");
+    static void triangle(int x, int y) {
+        int sum = x + y;
+        if (sum >= 180) {
+            System.out.println("triangle is not exist");
+        } else if (sum == 90) {
+            System.out.println("triangle is right-angled");
         } else {
-            System.out.println("Triangle is exist");
+            System.out.println("triangle is exist");
         }
     }
 }
