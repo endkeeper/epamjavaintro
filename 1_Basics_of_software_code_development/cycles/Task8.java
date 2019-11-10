@@ -6,23 +6,35 @@ package cycles;
 
 public class Task8 {
     public static void main(String[] args) {
-        numbers(10, 2);
-        numbers(-10, 4);
+        numbers(11, 2);
+        numbers(-15, 4);
         numbers(15432, -41232);
         numbers(5342, 0);
     }
 
     static void numbers(int x, int y) {
-        String firstNumber = "" + x;
-        String secondNumber = "" + y;
-
-        for (int i = 1; i <= firstNumber.length(); i++) {
-            System.out.println(i + " number of first figure: " + firstNumber.charAt(firstNumber.length() - i));
+        if (x < 0) {
+            x *= -1;
+        }
+        String lng1 = "" + x;
+        for (int i = 0; i < lng1.length(); i++) {
+            int resultx;
+            resultx = x % 10;
+            System.out.print(resultx);
+            x = x / 10;
+        }
+        System.out.print(" --- ");
+        if (y < 0) {
+            y *= -1;
+        }
+        String lng2 = "" + y;
+        for (int i = 0; i < lng2.length(); i++) {
+            int resulty;
+            resulty = y % 10;
+            System.out.print(resulty);
+            y = y / 10;
         }
         System.out.println();
-        for (int i = 1; i <= secondNumber.length(); i++) {
-            System.out.println(i + " number of second figure: " + secondNumber.charAt(secondNumber.length() - i));
-        }
-
     }
+
 }

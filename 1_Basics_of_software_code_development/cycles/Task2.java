@@ -13,9 +13,8 @@ public class Task2 {
         float a = scn.nextFloat();
         float b = scn.nextFloat();
         float h = scn.nextFloat();
-        float x = a;
         float y;
-        while (x <= b) {
+        for (float x = a; x <= b; x += h) {
             if (x > 2) {
                 y = x;
             } else {

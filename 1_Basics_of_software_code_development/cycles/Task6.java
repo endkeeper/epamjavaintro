@@ -14,8 +14,9 @@ public class Task6 {
     static void symbols(String x) {
         char[] symbols = x.toCharArray();
         for (int i = 0; i < symbols.length; i++) {
-            int result = (int) symbols[i];
-            System.out.println(symbols[i] + " in ASCII is " + result);
+            char symbol = symbols[i];
+            int result = (int) symbol;
+            System.out.println(symbol + " in ASCII is " + result);
         }
         System.out.println();
     }
