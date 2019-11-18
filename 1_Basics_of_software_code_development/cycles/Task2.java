@@ -21,7 +21,6 @@ public class Task2 {
                 y = -x;
             }
             System.out.println("If x = " + x + " y = " + y);
-            x += h;
         }
     }
 }

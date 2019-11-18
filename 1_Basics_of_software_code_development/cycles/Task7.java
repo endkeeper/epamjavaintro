@@ -15,8 +15,8 @@ public class Task7 {
         int n = scn.nextInt();
 
         for (int i = m; i <= n; i++) {
-            for (int j = 2; j <= n; j++) {
-                if (i % j == 0 && i != j) {
+            for (int j = 2; j < i; j++) {
+                if (i % j == 0) {
                     System.out.println(i + " can division on " + j);
                 }
             }

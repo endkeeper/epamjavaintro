@@ -9,7 +9,7 @@ public class Task4 {
         double result = 1;
         for (int i = 1; i <= 200; i++) {
             result *= Math.pow(i, 2);
-            System.out.println("Result is " + result);
         }
+        System.out.println("Result is " + result);
     }
 }
