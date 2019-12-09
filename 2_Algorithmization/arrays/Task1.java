@@ -13,12 +13,12 @@ public class Task1 {
 
     static void sum(int n, int k) {
         Scanner scn = new Scanner(System.in);
-        int[] A = new int[n];
+        int[] a = new int[n];
         int result = 0;
-        for (int i = 0; i < A.length; i++) {
-            A[i] = scn.nextInt();
-            if (A[i] % k == 0) {
-                result += A[i];
+        for (int i = 0; i < a.length; i++) {
+            a[i] = scn.nextInt();
+            if (a[i] % k == 0) {
+                result += a[i];
             }
         }
         System.out.println("result is " + result);

@@ -13,13 +13,13 @@ public class Task3 {
     }
 
     static void array(int n) {
-        int[] numbers = new int[n];
+        float[] numbers = new float[n];
         Scanner scn = new Scanner(System.in);
         int pos = 0;
         int neg = 0;
         int zero = 0;
         for (int i = 0; i < numbers.length; i++) {
-            numbers[i] = scn.nextInt();
+            numbers[i] = scn.nextFloat();
             if (numbers[i] > 0) {
                 pos++;
             } else if (numbers[i] == 0) {

@@ -13,18 +13,18 @@ public class Task2 {
     }
 
     static void replace(int n, int z) {
-        int[] arr = new int[n];
+        float[] arr = new float[n];
         int replaces = 0;
         Scanner scn = new Scanner(System.in);
         for (int i = 0; i < arr.length; i++) {
-            arr[i] = scn.nextInt();
+            arr[i] = scn.nextFloat();
             if (arr[i] > z) {
                 arr[i] = z;
                 replaces++;
             }
         }
-        for (int i : arr) {
-            System.out.print(i+" ");
+        for (float i : arr) {
+            System.out.print(i + " ");
         }
         System.out.println("Numbers of replaces is - " + replaces);
     }
