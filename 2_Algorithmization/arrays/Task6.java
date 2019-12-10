@@ -23,6 +23,7 @@ public class Task6 {
             if (check == true) {
                 sum += x[i];
             }
+            check = true;
         }
         System.out.println(sum);
     }
