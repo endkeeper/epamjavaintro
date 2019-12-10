@@ -12,18 +12,14 @@ public class Task6 {
 
     static void sum(float[] x) {
         float sum = x[2];
-        boolean check = true;
+        first:
         for (int i = 3; i < x.length; i++) {
             for (int j = 2; j < i; j++) {
                 if (i % j == 0) {
-                    check = false;
-                    break;
+                    continue first;
                 }
             }
-            if (check == true) {
-                sum += x[i];
-            }
-            check = true;
+            sum += x[i];
         }
         System.out.println(sum);
     }
