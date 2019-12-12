@@ -7,7 +7,7 @@ public class Task2 {
         result(4, 3, 1, 4);
     }
 
-    static void result(int a, int b, int c, int d) {
+    private static void result(int a, int b, int c, int d) {
         int min1;
         int min2;
         int max;

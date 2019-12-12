@@ -10,7 +10,7 @@ public class Task8 {
         numbers(952543, 84135);
     }
 
-    static void numbers(int x, int y) {
+    private static void numbers(int x, int y) {
         int tmp = y;
         while (x != 0) {
             int digitx = x % 10;

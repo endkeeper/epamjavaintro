@@ -7,7 +7,7 @@ public class Task5 {
         function(1);
     }
 
-    static void function(int x) {
+    private static void function(int x) {
         double result;
         if (x <= 3) {
             result = Math.pow(x, 2) - 3 * x + 9;

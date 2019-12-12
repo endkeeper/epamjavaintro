@@ -8,7 +8,7 @@ public class Task1 {
         triangle(45, 45);
     }
 
-    static void triangle(int x, int y) {
+    private static void triangle(int x, int y) {
         int sum = x + y;
         if (sum >= 180) {
             System.out.println("triangle is not exist");

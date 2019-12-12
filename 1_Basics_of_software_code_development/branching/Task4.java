@@ -8,7 +8,7 @@ public class Task4 {
         brick(5, 2, 1, 2, 3);
     }
 
-    static void brick(int a, int b, int x, int y, int z) {
+    private static void brick(int a, int b, int x, int y, int z) {
         boolean pos1 = a > x && b > y;
         boolean pos2 = a > z && b > y;
         boolean pos3 = a > y && b > x;
