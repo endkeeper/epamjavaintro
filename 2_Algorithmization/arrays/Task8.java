@@ -7,8 +7,8 @@ package arrays;
 
 public class Task8 {
     public static void main(String[] args) {
-        int[] arr = new int[]{12, 43, 1, 3, 5, 1, 5, 2, 3, 1, 4, 3};
-        min(arr);
+        min(new int[]{12, 43, 1, 3, 5, 1, 5, 2, 3, 1, 4, 3});
+        min(new int[]{9, 8, 7, 6, 5, 4});
     }
 
     // todo пересмотреть алгоритм в целом
