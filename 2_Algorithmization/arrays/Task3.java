@@ -5,25 +5,22 @@ package arrays;
 элементов
  */
 
-import java.util.Scanner;
-
 public class Task3 {
     public static void main(String[] args) {
         // TODO переделать через method(new float[]{1,2,3}); вызвать на нескольких наборах данных
-        array(5);
+        array(new float[]{3f, 5f, 52f, -43f, 13f, 0f});
+        array(new float[]{43f, -5f, -52f, 0f, 3f, 0f});
+        array(new float[]{41f, 0f, 0f, -47f, 7f, 0f});
     }
 
-    static void array(int n) {
-        float[] numbers = new float[n];
-        Scanner scn = new Scanner(System.in);
+    static void array(float[] x) {
         int pos = 0;
         int neg = 0;
         int zero = 0;
-        for (int i = 0; i < numbers.length; i++) {
-            numbers[i] = scn.nextFloat();
-            if (numbers[i] > 0) {
+        for (int i = 0; i < x.length; i++) {
+            if (x[i] > 0) {
                 pos++;
-            } else if (numbers[i] == 0) {
+            } else if (x[i] == 0) {
                 zero++;
             } else {
                 neg++;

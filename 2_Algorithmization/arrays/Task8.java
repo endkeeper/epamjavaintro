@@ -9,6 +9,7 @@ public class Task8 {
     public static void main(String[] args) {
         min(new int[]{12, 43, 1, 3, 5, 1, 5, 2, 3, 1, 4, 3});
         min(new int[]{9, 8, 7, 6, 5, 4});
+        min(new int[]{15, -3, 4, 1, -3, 6, 3, 2, 4});
     }
 
     // todo пересмотреть алгоритм в целом
@@ -18,8 +19,10 @@ public class Task8 {
         for (int i = 1; i < x.length; i++) {
             if (min >= x[i]) {
                 min = x[i];
-                // todo при таком подходе количество минимальных
-                //  может увеличиваться, даже если найденное число не является минимальным.
+            }
+        }
+        for (int i = 1; i < x.length; i++) {
+            if (x[i] == min) {
                 nmin++;
             }
         }
@@ -28,8 +31,6 @@ public class Task8 {
         for (int i = 0; i < x.length; i++) {
             if (x[i] == min) {
                 n++;
-                // todo зачем continue ?
-                continue;
             } else {
                 newArr[i - n] = x[i];
             }
@@ -37,5 +38,6 @@ public class Task8 {
         for (int m : newArr) {
             System.out.print(m + " ");
         }
+        System.out.println();
     }
 }

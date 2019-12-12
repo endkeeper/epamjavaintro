@@ -1,27 +1,25 @@
 package arrays;
 
-
-import java.util.Scanner;
-
 /*
 В массиве A[n] занесены натуральные числа. Найти суммы тех элементов, которые кратн данному k
  */
+
 public class Task1 {
     public static void main(String[] args) {
         // TODO переделать через method(new int[]{1,2,3}); вызвать на нескольких наборах данных
-        sum(3, 3);
+        int k = 6;
+        sum(new int[]{1, 5, 4, 3, 2, 7, 5, 4}, k);
+        sum(new int[]{1, 5, 4, 6, 2, 7, 5, -6, 6}, k);
+        sum(new int[]{1, 5, 6, 3, 2, 12, 5, 4}, k);
     }
 
-    private static void sum(int n, int k) {
-        Scanner scn = new Scanner(System.in);
-        int[] a = new int[n];
+    private static void sum(int[] x, int k) {
         int result = 0;
-        for (int i = 0; i < a.length; i++) {
-            a[i] = scn.nextInt();
-            if (a[i] % k == 0) {
-                result += a[i];
+        for (int i = 0; i < x.length; i++) {
+            if (x[i] % k == 0) {
+                result += x[i];
             }
         }
-        System.out.println("result is " + result);
+        System.out.println(result);
     }
 }
