@@ -5,6 +5,7 @@ package cycles;
  * заданному e.  Общий член ряда имеет вид (1 / Math.pow(2, n)) + (1 / Math.pow(3, n)).
  */
 
+// TODO переделать через for
 public class Task5 {
     public static void main(String[] args) {
         pos(0.01);
