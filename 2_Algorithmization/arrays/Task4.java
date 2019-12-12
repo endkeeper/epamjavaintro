@@ -12,7 +12,9 @@ public class Task4 {
         replace(6);
     }
 
-    static void replace(int n) {
+    // todo переделать через method(new int[]{1,2,3}); вызвать на нескольких наборах данных
+    private static void replace(int n) {
+        // todo объявление индексов рядом с объявлением max и min
         int maxi = 0;
         int mini = 0;
         Scanner scn = new Scanner(System.in);
@@ -22,7 +24,9 @@ public class Task4 {
         }
         float max = numbers[0];
         float min = numbers[0];
+        // todo просмотр от первого элемента
         for (int i = 0; i < numbers.length; i++) {
+            // todo переприсваивание делать только в случае если текущий элемент меньше, чем предыдущий
             if (numbers[i] <= min) {
                 min = numbers[i];
                 mini = i;

@@ -10,7 +10,7 @@ public class Task5 {
         numbers(arr);
     }
 
-    static void numbers(int[] arr) {
+    private static void numbers(int[] arr) {
         for (int i = 0; i < arr.length; i++) {
             if (arr[i] > i) {
                 System.out.println(arr[i] + " ");

@@ -9,6 +9,7 @@ import java.util.Scanner;
 
 public class Task3 {
     public static void main(String[] args) {
+        // TODO переделать через method(new float[]{1,2,3}); вызвать на нескольких наборах данных
         array(5);
     }
 

@@ -1,17 +1,18 @@
 package arrays;
 
-/*
-В массиве A[n] занесены натуральные числа. Найти суммы тех элементов, которые кратн данному k
- */
 
 import java.util.Scanner;
 
+/*
+В массиве A[n] занесены натуральные числа. Найти суммы тех элементов, которые кратн данному k
+ */
 public class Task1 {
     public static void main(String[] args) {
+        // TODO переделать через method(new int[]{1,2,3}); вызвать на нескольких наборах данных
         sum(3, 3);
     }
 
-    static void sum(int n, int k) {
+    private static void sum(int n, int k) {
         Scanner scn = new Scanner(System.in);
         int[] a = new int[n];
         int result = 0;

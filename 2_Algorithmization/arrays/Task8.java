@@ -11,12 +11,15 @@ public class Task8 {
         min(arr);
     }
 
-    static void min(int[] x) {
+    // todo пересмотреть алгоритм в целом
+    private static void min(int[] x) {
         int min = x[0];
         int nmin = 0;
         for (int i = 1; i < x.length; i++) {
             if (min >= x[i]) {
                 min = x[i];
+                // todo при таком подходе количество минимальных
+                //  может увеличиваться, даже если найденное число не является минимальным.
                 nmin++;
             }
         }
@@ -25,14 +28,14 @@ public class Task8 {
         for (int i = 0; i < x.length; i++) {
             if (x[i] == min) {
                 n++;
+                // todo зачем continue ?
                 continue;
-
             } else {
                 newArr[i - n] = x[i];
             }
         }
         for (int m : newArr) {
-            System.out.println(m);
+            System.out.print(m + " ");
         }
     }
 }

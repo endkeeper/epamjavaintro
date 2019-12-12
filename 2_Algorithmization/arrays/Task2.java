@@ -1,18 +1,19 @@
 package arrays;
 
+
+import java.util.Scanner;
+
 /*
 Дана последовательность действительных чисел a1, a2, ..., an. Заменить все ее члены, большиие данного Z, этим числом,
 посчитать количество замен.
  */
-
-import java.util.Scanner;
-
 public class Task2 {
     public static void main(String[] args) {
+        // TODO переделать через method(new float[]{1,2,3}); вызвать на нескольких наборах данных
         replace(6, 7);
     }
 
-    static void replace(int n, int z) {
+    private static void replace(int n, int z) {
         float[] arr = new float[n];
         int replaces = 0;
         Scanner scn = new Scanner(System.in);

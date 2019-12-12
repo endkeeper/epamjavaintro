@@ -5,14 +5,23 @@ package arrays;
 то определить наименьшее из них
  */
 
+import java.util.Arrays;
+
 public class Task9 {
     public static void main(String[] args) {
-        int[] arr = new int[]{1, 54, 3, 4, 6, 1, 9, 4, 9, 1, 9, 9, 1, 9,};
-        numbers(arr);
+        numbers(new int[]{1, 54, 3, 4, 6, 1, 9, 4, 9, 1, 9, 9, 1, 9});
+        numbers(new int[]{1, 54, 3, 4, 6, 1, 9, 4, 9, 1, 9, 9, 1});
+        numbers(new int[]{1, 2, 2, 1});
+        numbers(new int[]{2, 1, 3, 0});
+        numbers(new int[]{1, 2, 2, 2});
+        numbers(new int[]{1});
     }
 
-    static void numbers(int[] x) {
+    // todo попробовать без дополнительного массива
+    private static void numbers(int[] x) {
+        System.out.println(Arrays.toString(x));
         int n = 0;
+        // todo [] до названия переменной
         int repeats[] = new int[x.length];
         for (int i = 0; i < x.length; i++) {
             for (int j = 0; j < x.length; j++) {
