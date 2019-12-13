@@ -5,6 +5,8 @@ package arrays;
 которые равны min(a1,a2,...,an)
  */
 
+import java.util.Arrays;
+
 public class Task8 {
     public static void main(String[] args) {
         min(new int[]{12, 43, 1, 3, 5, 1, 5, 2, 3, 1, 4, 3});
@@ -12,32 +14,36 @@ public class Task8 {
         min(new int[]{15, -3, 4, 1, -3, 6, 3, 2, 4});
     }
 
-    // todo пересмотреть алгоритм в целом
-    private static void min(int[] x) {
-        int min = x[0];
-        int nmin = 0;
-        for (int i = 1; i < x.length; i++) {
-            if (min >= x[i]) {
-                min = x[i];
+    private static void min(int[] arr) {
+        System.out.println("before " + Arrays.toString(arr));
+        int min = arr[0];
+        int minCount = 1;
+        for (int i = 1; i < arr.length; i++) {
+            if (min > arr[i]) {
+                min = arr[i];
+                // в случае, если произошло переприсвавание,
+                // то minCount опять считаем равным 1.
+                minCount = 1;
+            } else if (min == arr[i]) {
+                minCount++;
             }
         }
-        for (int i = 1; i < x.length; i++) {
-            if (x[i] == min) {
-                nmin++;
+
+        int[] newArr = new int[arr.length - minCount];
+        for (int i = 0, n = 0; i < arr.length; i++) {
+            // если элемент равен минимальному, то пропускаем
+            if (arr[i] == min) {
+                continue;
             }
+            newArr[n++] = arr[i];
         }
-        int[] newArr = new int[x.length - nmin];
-        int n = 0;
-        for (int i = 0; i < x.length; i++) {
-            if (x[i] == min) {
-                n++;
-            } else {
-                newArr[i - n] = x[i];
-            }
-        }
+        System.out.println("min = " + min);
+        System.out.println("min count = " + minCount);
+        System.out.print("after ");
         for (int m : newArr) {
             System.out.print(m + " ");
         }
+        System.out.println();
         System.out.println();
     }
 }

@@ -4,10 +4,8 @@ package arrays;
 Дана последовательность действительных чисел a1, a2, ..., an. Заменить все ее члены, большиие данного Z, этим числом,
 посчитать количество замен.
  */
-
 public class Task2 {
     public static void main(String[] args) {
-        // TODO переделать через method(new float[]{1,2,3}); вызвать на нескольких наборах данных
         float z = 6f;
         replace(new float[]{1f, 43f, 3f, -1f, 573f}, z);
         replace(new float[]{-7f, -23f, -57f, 0f, 3f}, z);

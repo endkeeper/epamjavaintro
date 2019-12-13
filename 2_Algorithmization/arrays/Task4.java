@@ -13,21 +13,17 @@ public class Task4 {
         replace(new float[]{4f, 42f, 13f, -142f, 752f, 17f});
     }
 
-    // todo переделать через method(new int[]{1,2,3}); вызвать на нескольких наборах данных
     private static void replace(float[] x) {
-        // todo объявление индексов рядом с объявлением max и min
         float max = x[0];
         float min = x[0];
         int maxi = 0;
         int mini = 0;
-        // todo просмотр от первого элемента
         for (int i = 1; i < x.length; i++) {
-            // todo переприсваивание делать только в случае если текущий элемент меньше, чем предыдущий
             if (x[i] < min) {
                 min = x[i];
                 mini = i;
             }
-            if (x[i] >= max) {
+            if (x[i] > max) {
                 max = x[i];
                 maxi = i;
             }

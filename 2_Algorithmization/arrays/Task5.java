@@ -3,7 +3,6 @@ package arrays;
 /*
 Даны целые числа a1, a2,..., an. Вывести на печать только те числа, для которых ai>i.
  */
-
 public class Task5 {
     public static void main(String[] args) {
         numbers(new int[]{4, 1, 6, 3, 2, 1});
