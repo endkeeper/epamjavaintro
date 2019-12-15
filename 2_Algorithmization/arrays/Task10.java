@@ -25,11 +25,9 @@ public class Task10 {
             if (i % 2 == 0) {
                 n++;
                 x[i - n] = x[i];
-            } else {
-                // todo значение m можно высчитать без прохода по массиву
-                m++;
             }
         }
+        m += n;
         for (int i = (x.length - m) + 1; i < x.length; i++) {
             x[i] = 0;
         }
