@@ -21,13 +21,14 @@ public class Task10 {
     static void newArr(int[] x) {
         int m = 1;
         int n = 0;
-        for (int i = 1; i < x.length; i++) {
+        for (int i = 0; i < x.length; i++) {
             if (i % 2 == 0) {
                 n++;
-                x[i - n] = x[i];
+                x[i - n + 1] = x[i];}
+            else {
+                m++;
             }
         }
-        m += n;
         for (int i = (x.length - m) + 1; i < x.length; i++) {
             x[i] = 0;
         }
