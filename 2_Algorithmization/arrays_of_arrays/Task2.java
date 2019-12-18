@@ -15,11 +15,17 @@ public class Task2 {
                 {1, -5, 0},
                 {0, 2, 3}});
         diagonale(new int[][]{
-                {4, 1, 3},
-                {3, 3, 6},
-                {8, 9, 7}});
+                {4, 1},
+                {3, 3}});
+        diagonale(new int[][]{
+                {-1, 1, 3, 5},
+                {3, 12, 6, 7},
+                {8, 9, 7, 8},
+                {8, 9, 7, 9}});
     }
 
+    // todo через 1 for и без if
+    // todo квадратная матрица значит размерность nxn, что означает arr[0] length = arr.length
     private static void diagonale(int[][] arr) {
         for (int i = 0; i < arr[0].length; i++) {
             for (int j = 0; j < arr.length; j++) {
