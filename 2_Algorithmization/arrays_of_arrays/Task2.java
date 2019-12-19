@@ -24,16 +24,10 @@ public class Task2 {
                 {8, 9, 7, 9}});
     }
 
-    // todo через 1 for и без if
-    // todo квадратная матрица значит размерность nxn, что означает arr[0] length = arr.length
     private static void diagonale(int[][] arr) {
-        for (int i = 0; i < arr[0].length; i++) {
-            for (int j = 0; j < arr.length; j++) {
-                if (i == j) {
-                    System.out.println(arr[i][j]);
-                    break;
-                }
-            }
+        int count = arr.length;
+        for (int i = 0; i < count; i++) {
+            System.out.print(arr[i][i] + " ");
         }
         System.out.println();
     }

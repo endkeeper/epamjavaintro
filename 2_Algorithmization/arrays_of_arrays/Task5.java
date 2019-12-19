@@ -18,11 +18,9 @@ public class Task5 {
     private static void matrix(int n) {
         int[][] arr = new int[n][n];
         for (int i = 0; i < n; i++) {
-            // todo без if. (значение int по умолчанию - 0, явно его указывать не надо).
             for (int j = 0; j < n; j++) {
-                arr[i][j] = i + 1;
-                if (n - i <= j) {
-                    arr[i][j] = 0;
+                if (n - i > j) {
+                    arr[i][j] = i + 1;
                 }
             }
         }

@@ -16,21 +16,31 @@ public class Task3 {
                         {4, 1, 1, 6},
                         {-3, 0, 2, 6},
                         {6, 7, 3, 6}},
-                3, 1);
+                2, 1);
         array(new int[][]{
                         {0, 0, 1, 4},
                         {2, -4, 3, -2}},
                 1, 2);
     }
-    // todo поправить вывод столбца/строки
+
     private static void array(int[][] x, int k, int p) {
-        for (int i = 0; i < x[0].length; i++) {
-            for (int j = 0; j < x.length; j++) {
+        int rowCount = x.length;
+        int columnCount = x[0].length;
+        System.out.print("Row : ");
+        for (int i = 0; i < rowCount; i++) {
+            for (int j = 0; j < columnCount; j++) {
                 if (i == k) {
-                    System.out.println(x[i][j] + " row");
+                    System.out.print(x[i][j] + "  ");
                 }
+            }
+        }
+        System.out.println();
+        System.out.print("Column : ");
+        for (int i = 0; i < rowCount; i++) {
+            for (int j = 0; j < columnCount; j++) {
                 if (j == p) {
-                    System.out.println(x[i][j] + " column");
+
+                    System.out.print(x[i][j] + "  ");
                 }
             }
         }

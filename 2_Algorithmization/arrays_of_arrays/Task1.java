@@ -24,24 +24,26 @@ public class Task1 {
         );
     }
 
-    // todo arr.length и arr[0].length выносим в отдельные переменные,
-    //  указывая их имена во всех задачах (rowCount, columnCount и тд)
     // todo исправить вывод столбцов (System.out.printf или system.out.print с пробелом по аналогии как в других задачах)
     private static void show(int[][] arr) {
-        for (int i = 0; i < arr.length; i++) {
-            // todo j от 0
-            for (int j = 1; j < arr[0].length; j++) {
-                // todo предусмотреть, что j может быть от 0
-                // todo здесь идут 2 if, их можно объединить в один.
-                //  сделать через переменные: одна переменная boolean isOdd
-                //  вторая boolean isFirstMoreThanLast
-                //  если и первая и вторая одновременно true (isOdd && isFirstMoreThan)
-                //  то печатаем
+        int rowCount = arr.length;
+        int columnCount = arr[0].length;
+        boolean isOdd = false;
+        boolean isFirstMoreThanLast = false;
+        for (int i = 0; i < rowCount; i++) {
+            for (int j = 0; j < columnCount; j++) {
                 if (j % 2 != 0) {
-                    // todo количество столбцов может быть больше чем 2
-                    if (arr[0][j] > arr[2][j]) {
-                        System.out.println(arr[i][j]);
-                    }
+                    isOdd = true;
+                } else {
+                    isOdd = false;
+                }
+                if (arr[0][j] > arr[rowCount - 1][j]) {
+                    isFirstMoreThanLast = true;
+                } else {
+                    isFirstMoreThanLast = false;
+                }
+                if (isOdd == true && isFirstMoreThanLast) {
+                    System.out.print(arr[i][j] + " ");
                 }
             }
         }
