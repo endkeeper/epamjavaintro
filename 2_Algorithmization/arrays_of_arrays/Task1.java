@@ -28,20 +28,24 @@ public class Task1 {
     private static void show(int[][] arr) {
         int rowCount = arr.length;
         int columnCount = arr[0].length;
+        // todo можно явно не указывать. (наводишь мышкой, жмёшь alt+enter)
         boolean isOdd = false;
         boolean isFirstMoreThanLast = false;
         for (int i = 0; i < rowCount; i++) {
             for (int j = 0; j < columnCount; j++) {
+                // todo наведи мышкой на if, нажми alt+enter и simplify. посмотри, что получится
                 if (j % 2 != 0) {
                     isOdd = true;
                 } else {
                     isOdd = false;
                 }
+                // todo наведи мышкой на if, нажми alt+enter и simplify. посмотри, что получится
                 if (arr[0][j] > arr[rowCount - 1][j]) {
                     isFirstMoreThanLast = true;
                 } else {
                     isFirstMoreThanLast = false;
                 }
+                // todo наведи мышкой на isOdd == true, нажми alt+enter и simplify. посмотри, что получится
                 if (isOdd == true && isFirstMoreThanLast) {
                     System.out.print(arr[i][j] + " ");
                 }

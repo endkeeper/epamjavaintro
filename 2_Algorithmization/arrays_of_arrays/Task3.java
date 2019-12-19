@@ -29,6 +29,7 @@ public class Task3 {
         System.out.print("Row : ");
         for (int i = 0; i < rowCount; i++) {
             for (int j = 0; j < columnCount; j++) {
+                // todo без if
                 if (i == k) {
                     System.out.print(x[i][j] + "  ");
                 }
@@ -38,8 +39,8 @@ public class Task3 {
         System.out.print("Column : ");
         for (int i = 0; i < rowCount; i++) {
             for (int j = 0; j < columnCount; j++) {
+                // todo без if
                 if (j == p) {
-
                     System.out.print(x[i][j] + "  ");
                 }
             }

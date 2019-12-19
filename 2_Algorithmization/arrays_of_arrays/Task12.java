@@ -24,6 +24,7 @@ public class Task12 {
         }
         System.out.println();
         for (int[] x : arr) {
+            // todo в будущем вернуться и переписать без foreach через обычную сортировку
             Arrays.sort(x);
         }
         for (int i = 0; i < n; i++) {

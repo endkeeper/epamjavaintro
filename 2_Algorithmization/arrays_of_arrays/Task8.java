@@ -13,6 +13,7 @@ public class Task8 {
     }
 
     private static void matrix(int n) {
+        // todo количество столбцов может быть не равным количеству строк
         int[][] arr = new int[n][n];
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {

@@ -16,12 +16,12 @@ public class Task7 {
         double[][] arr = new double[n][n];
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {
+                // todo ошибки внутри math.sin
                 arr[i][j] = Math.sin(i ^ 2 - j ^ 2 / n);
                 if (arr[i][j] > 0) {
                     pos++;
                 }
             }
-
         }
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {

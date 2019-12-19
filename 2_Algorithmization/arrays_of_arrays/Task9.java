@@ -13,7 +13,9 @@ public class Task9 {
     }
 
     private static void matrix(int n) {
+        // todo количество столбцов может не быть равным количеству строк
         int[][] arr = new int[n][n];
+        // todo объявить sum как loop variable
         int sum = 0;
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {
@@ -29,6 +31,7 @@ public class Task9 {
             if (maxSum < sum) {
                 maxSum = sum;
             }
+            // todo обнуление sum внутри соотв. секции for
             sum = 0;
         }
         System.out.println();
