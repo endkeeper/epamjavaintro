@@ -18,11 +18,8 @@ public class Task5 {
     private static void matrix(int n) {
         int[][] arr = new int[n][n];
         for (int i = 0; i < n; i++) {
-            for (int j = 0; j < n; j++) {
-                // todo попробуй перенести этот if в условия цикла (до какого j необходимо выполнять тело цикла)
-                if (n - i > j) {
-                    arr[i][j] = i + 1;
-                }
+            for (int j = 0; j < n - i; j++) {
+                arr[i][j] = i + 1;
             }
         }
         for (int i = 0; i < n; i++) {

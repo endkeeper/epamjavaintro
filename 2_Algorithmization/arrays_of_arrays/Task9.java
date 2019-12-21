@@ -7,23 +7,20 @@ package arrays_of_arrays;
 
 public class Task9 {
     public static void main(String[] args) {
-        matrix(3);
-        matrix(5);
-        matrix(8);
+        matrix(3, 3);
+        matrix(5, 5);
+        matrix(8, 6);
     }
 
-    private static void matrix(int n) {
-        // todo количество столбцов может не быть равным количеству строк
-        int[][] arr = new int[n][n];
-        // todo объявить sum как loop variable
-        int sum = 0;
+    private static void matrix(int n, int k) {
+        int[][] arr = new int[n][k];
         for (int i = 0; i < n; i++) {
-            for (int j = 0; j < n; j++) {
+            for (int j = 0; j < k; j++) {
                 arr[i][j] = (int) (Math.random() * 100);
             }
         }
         int maxSum = 0;
-        for (int i = 0; i < n; i++) {
+        for (int i = 0, sum = 0; i < k; i++, sum = 0) {
             for (int j = 0; j < n; j++) {
                 sum += arr[j][i];
             }
@@ -31,13 +28,11 @@ public class Task9 {
             if (maxSum < sum) {
                 maxSum = sum;
             }
-            // todo обнуление sum внутри соотв. секции for
-            sum = 0;
         }
         System.out.println();
         System.out.println("Matrix:");
         for (int i = 0; i < n; i++) {
-            for (int j = 0; j < n; j++) {
+            for (int j = 0; j < k; j++) {
                 System.out.print(arr[i][j] + " ");
             }
             System.out.println();

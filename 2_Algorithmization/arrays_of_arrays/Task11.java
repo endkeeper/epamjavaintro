@@ -20,20 +20,16 @@ public class Task11 {
             }
             System.out.println();
         }
-        // todo numberFive сделать как loop variable
-        int numberFive = 0;
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0, numberFive = 0; i < 10; i++, numberFive = 0) {
             for (int j = 0; j < 20; j++) {
                 if (arr[i][j] == 5) {
                     numberFive++;
                 }
+                if (numberFive == 3) {
+                    System.out.println(i + " row");
+                    break;
+                }
             }
-            // todo как только достигли необходимого количества, то печатаем и переходим к следующей итерации через continue
-            if (numberFive >= 3) {
-                System.out.println(i + " row");
-            }
-            // todo обнуление в соотв. секции цикла for
-            numberFive = 0;
         }
     }
 }

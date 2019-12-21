@@ -27,23 +27,14 @@ public class Task3 {
         int rowCount = x.length;
         int columnCount = x[0].length;
         System.out.print("Row : ");
-        for (int i = 0; i < rowCount; i++) {
-            for (int j = 0; j < columnCount; j++) {
-                // todo без if
-                if (i == k) {
-                    System.out.print(x[i][j] + "  ");
-                }
-            }
+        for (int j = 0; j < columnCount; j++) {
+            System.out.print(x[k][j] + "  ");
         }
+
         System.out.println();
         System.out.print("Column : ");
         for (int i = 0; i < rowCount; i++) {
-            for (int j = 0; j < columnCount; j++) {
-                // todo без if
-                if (j == p) {
-                    System.out.print(x[i][j] + "  ");
-                }
-            }
+            System.out.print(x[i][p] + "  ");
         }
         System.out.println();
     }

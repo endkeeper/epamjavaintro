@@ -13,14 +13,17 @@ public class Task6 {
 
     private static void matrix(int n) {
         int[][] arr = new int[n][n];
+        boolean isUpperTriangle = false;
+        boolean isLoverTriangle = false;
         for (int i = 0; i < n; i++) {
-            for (int j = 0; j < n; j++) {
-                // todo добавим 2 boolean переменные: isUpperTriangle, isLowerTriangle
-                //  в случае, если isUpperTriangle || isLowerTriangle, то arr[i][j] = 1;
+            for (int j = 0; j < n; j++, isLoverTriangle = false, isUpperTriangle = false) {
                 if (i <= j && n - j > i) {
-                    arr[i][j] = 1;
+                    isUpperTriangle = true;
                 }
                 if (i >= j && n - j - 1 <= i) {
+                    isLoverTriangle = true;
+                }
+                if (isLoverTriangle || isUpperTriangle) {
                     arr[i][j] = 1;
                 }
             }
