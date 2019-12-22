@@ -8,7 +8,7 @@ package arrays_of_arrays;
 public class Task9 {
     public static void main(String[] args) {
         matrix(3, 3);
-        matrix(5, 5);
+        matrix(5, 7);
         matrix(8, 6);
     }
 
@@ -23,7 +23,7 @@ public class Task9 {
         for (int i = 0, sum = 0; i < k; i++, sum = 0) {
             for (int j = 0; j < n; j++) {
                 sum += arr[j][i];
-            }
+            }   
             System.out.println("Amount " + i + " column is " + sum);
             if (maxSum < sum) {
                 maxSum = sum;
