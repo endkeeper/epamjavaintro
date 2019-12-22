@@ -13,17 +13,20 @@ public class Task6 {
 
     private static void matrix(int n) {
         int[][] arr = new int[n][n];
-        boolean isUpperTriangle = false;
-        boolean isLoverTriangle = false;
+        boolean isUpTriangle = false;
+        boolean isLowTriangle = false;
         for (int i = 0; i < n; i++) {
-            for (int j = 0; j < n; j++, isLoverTriangle = false, isUpperTriangle = false) {
+            // todo попробуй без присваивания false в секции цикла.
+            //  необходимо сделать так, чтобы внутри цикла значение переменных устанавливалось автоматически
+            //  без присваивания false в конце каждой итерации
+            for (int j = 0; j < n; j++, isLowTriangle = false, isUpTriangle = false) {
                 if (i <= j && n - j > i) {
-                    isUpperTriangle = true;
+                    isUpTriangle = true;
                 }
                 if (i >= j && n - j - 1 <= i) {
-                    isLoverTriangle = true;
+                    isLowTriangle = true;
                 }
-                if (isLoverTriangle || isUpperTriangle) {
+                if (isLowTriangle || isUpTriangle) {
                     arr[i][j] = 1;
                 }
             }
