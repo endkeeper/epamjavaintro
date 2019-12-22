@@ -22,6 +22,7 @@ public class Task11 {
         }
         for (int i = 0, numberFive = 0; i < 10; i++, numberFive = 0) {
             for (int j = 0; j < 20; j++) {
+                // todo попробуй через 1 if (2 условия можно объединить в одно + операция инкремента внутри условия)
                 if (arr[i][j] == 5) {
                     numberFive++;
                 }

@@ -11,7 +11,7 @@ public class Task12 {
         matrix(5);
         matrix(7);
     }
-
+    // todo матрица может бы не квадратной
     private static void matrix(int n) {
         int[][] arr = new int[n][n];
         System.out.println("Matrix:");
