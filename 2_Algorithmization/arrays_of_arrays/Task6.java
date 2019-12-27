@@ -17,16 +17,8 @@ public class Task6 {
         boolean isLowTriangle;
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {
-                if (i <= j && n - j > i) {
-                    isUpTriangle = true;
-                } else {
-                    isUpTriangle = false;
-                }
-                if (i >= j && n - j - 1 <= i) {
-                    isLowTriangle = true;
-                } else {
-                    isLowTriangle = false;
-                }
+                isUpTriangle = i <= j && n - j > i;
+                isLowTriangle = i >= j && n - j - 1 <= i;
                 if (isLowTriangle || isUpTriangle) {
                     arr[i][j] = 1;
                 }
