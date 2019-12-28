@@ -8,12 +8,13 @@ import java.util.Arrays;
 
 public class Task3 {
     public static void main(String[] args) {
-        sort(new int[]{1, 4, 5, 8, 43});
-        sort(new int[]{3, 6, 13, 16, 16});
+        sort(new int[]{43, 1, 4, 5, 8});
+        sort(new int[]{3, 6, 16, 13, 16});
         sort(new int[]{10, 21, 54, 54, 123, 432});
-
+        sort(new int[]{21, 10, 432, 54, -5, 123});
     }
 
+    // todo пересмотри алгоритм
     private static void sort(int[] arr) {
         int length = arr.length;
         System.out.println("Before: ");
