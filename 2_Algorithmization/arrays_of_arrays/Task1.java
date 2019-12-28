@@ -24,7 +24,6 @@ public class Task1 {
         );
     }
 
-    // todo исправить вывод столбцов (System.out.printf или system.out.print с пробелом по аналогии как в других задачах)
     private static void show(int[][] arr) {
         int rowCount = arr.length;
         int columnCount = arr[0].length;

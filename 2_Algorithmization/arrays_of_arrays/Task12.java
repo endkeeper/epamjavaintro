@@ -4,7 +4,6 @@ package arrays_of_arrays;
 Отсортировать строки матрицы по возрастанию и убыванию значений элементов*
  */
 
-import java.util.ArrayList;
 import java.util.Arrays;
 
 public class Task12 {
@@ -13,7 +12,6 @@ public class Task12 {
         matrix(7, 4);
     }
 
-    // todo матрица может бы не квадратной
     private static void matrix(int n, int k) {
         int[][] arr = new int[n][k];
         System.out.println("Matrix:");
@@ -24,7 +22,7 @@ public class Task12 {
             }
             System.out.println();
         }
-        for(int[] x: arr){
+        for (int[] x : arr) {
             Arrays.sort(x);
         }
         System.out.println();
