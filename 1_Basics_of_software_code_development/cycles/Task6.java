@@ -13,8 +13,8 @@ public class Task6 {
 
     private static void symbols(String x) {
         char[] symbols = x.toCharArray();
-        for (int symbol : symbols) {
-            System.out.println(symbol + " in ASCII is " + symbol);
+        for (char symbol : symbols) {
+            System.out.println(symbol + " in ASCII is " + (int) symbol);
         }
         System.out.println();
     }
