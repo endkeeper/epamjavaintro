@@ -1,27 +1,17 @@
-package linear_programms;
+/*Дано натуральное число Т, которое представляет длительность прошедшего времени в секундах. Вывести данное значение
+ * длительности в часах, минутах и секундах в формате  HHч MMмин SSс */
 
 import java.util.Scanner;
-
-/**
- * Дано натуральное число T, которое представляет длительность прошедшего
- * времени в секунднах. Вывести данное знаение длительности в часах, минутах
- * и секундах в следующей форме HHч MMмин SSс
- */
 
 public class Task5 {
     public static void main(String[] args) {
         Scanner scn = new Scanner(System.in);
-        System.out.println("Insert some number");
+        System.out.println("seconds: ");
         int x = scn.nextInt();
-        int h = x / 3600;
-        int m = x / 60;
-        if (m > 60) {
-            m = m % 60;
-        }
-        if (m == 60) {
-            m = 0;
-        }
-        int s = x % 60;
-        System.out.println(h + "h " + m + "m " + s + "s");
+        int hours, minutes, seconds;
+        hours = x/3600;
+        minutes=(x%3600)/60;
+        seconds = (x%3600)%60;
+        System.out.println(hours+"h "+minutes+"m "+seconds+"s");
     }
 }

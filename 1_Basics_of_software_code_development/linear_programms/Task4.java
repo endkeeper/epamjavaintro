@@ -1,22 +1,16 @@
-package linear_programms;
+//Дано действительное число R вида  nnn.ddd. Поменять местами дробную и целую часть
 
 import java.util.Scanner;
 
-/**
- * Дано действительное натуральное число R вида nnn.ddd(три цифровых разряда
- * в дробно и целой частях). Поменять местами дробную и целую части числа и вывести
- * полученное значение числа
- */
-
 public class Task4 {
     public static void main(String[] args) {
+        double number;
         Scanner scn = new Scanner(System.in);
-        System.out.println("Insert number format xxx,yyy");
-        float number = scn.nextFloat();
-        float newNumber = (int) number;
-        newNumber /= 1000;
-        float tmp = (number * 1000) % 1000;
-        newNumber += tmp;
-        System.out.println("Result: " + newNumber);
+        System.out.println("Enter variable nnn.ddd");
+        number = scn.nextDouble();
+        int var1, var2;
+        var1 = (int) number;
+        var2 = (int) (number * 1000) % 1000;
+        System.out.println("Result: " + var2 + "." + var1);
     }
 }
