@@ -1,21 +1,14 @@
-package linear_programms;
-
 import java.util.Scanner;
 
-/**
- * Найдите значение функции z = ( (a - 3) * b / 2 ) + c
- */
-
 public class Task1 {
-    public static void main(String[] args) {
+    public static void main(String[] args){
+        float a,b,c,z;
+        System.out.println("Enter variables a,b,c");
         Scanner scn = new Scanner(System.in);
-        System.out.println("Введите a");
-        int a = scn.nextInt();
-        System.out.println("Введите b");
-        float b = scn.nextInt();
-        System.out.println("Введите c");
-        int c = scn.nextInt();
-        float z = ((a - 3) * b / 2) + c;
-        System.out.printf("Ответ: " + "%.1f", z);
+        a=scn.nextFloat();
+        b=scn.nextFloat();
+        c=scn.nextFloat();
+        z=((a-3)*b/2)+c;
+        System.out.println("Result: " + z);
     }
 }
