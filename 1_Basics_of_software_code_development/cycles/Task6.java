@@ -1,21 +1,19 @@
-package cycles;
-
-/**
- * Вывести на экран соответствия между символами и их численными обозначениями в памяти компьютера
+/*
+Вывести на экран соответствие между символами и их численным обозначением в памяти компьютера
  */
 
 public class Task6 {
     public static void main(String[] args) {
-        symbols("13123");
-        symbols("sadasdqw");
-        symbols("$#@^@#esd312");
+        conformnity("Something about arrays");
     }
 
-    private static void symbols(String x) {
-        char[] symbols = x.toCharArray();
-        for (char symbol : symbols) {
-            System.out.println(symbol + " in ASCII is " + (int) symbol);
+    static void conformnity(String text) {
+        char[] symbols = text.toCharArray();
+        int index;
+        for (int i = 0; i < symbols.length; i++) {
+            index = symbols[i];
+            System.out.println(symbols[i] + " - " + index);
         }
-        System.out.println();
     }
+
 }

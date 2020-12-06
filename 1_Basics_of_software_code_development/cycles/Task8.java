@@ -1,31 +1,42 @@
-package cycles;
-
-/**
- * Даны два числа. Определить цифры, входящие в запись как первого так и второго числа
+/*
+Даны два числа, определить цифры, входящий в состав как первого, так и второго числа.
  */
 
-// TODO переделать через структуру данных
+import java.util.ArrayList;
+
 public class Task8 {
     public static void main(String[] args) {
-        numbers(41356, 21354);
-        numbers(952543, 84135);
+        int a, b;
+        a = 7231;
+        b = 234088887;
+        compare(a, b);
     }
 
-    private static void numbers(int x, int y) {
-        int tmp = y;
-        while (x != 0) {
-            int digitx = x % 10;
-            while (y != 0) {
-                int digity = y % 10;
-                if (digitx == digity) {
-                    System.out.print(" " + digitx);
-                }
-                y = y / 10;
-            }
-
-            x = x / 10;
-            y = tmp;
+    static void compare(int a, int b) {
+        ArrayList listA = new ArrayList();
+        ArrayList listB = new ArrayList();
+        ArrayList result = new ArrayList();
+        while (a > 0) {
+            listA.add(a % 10);
+            a /= 10;
         }
-        System.out.println();
+        while (b > 0) {
+            listB.add(b % 10);
+            b /= 10;
+        }
+        for (int i = 0; i < listA.size(); i++) {
+            for (int j = 0; j < listB.size(); j++) {
+                if(listA.get(i)==listB.get(j)){
+                    result.add(listA.get(i));
+                    for(int x = 0; x<listA.size(); x++ ){
+                        listA.remove(listB.get(j));
+                    }
+                }
+            }
+        }
+        System.out.println("Same: ");
+        for (int i = 0; i < result.size(); i++) {
+            System.out.print(result.get(i) + " ");
+        }
     }
 }

@@ -1,15 +1,12 @@
-package cycles;
-
-/**
- * Найдите сумму квадратов первых ста чисел
- */
+//Найти сумму квадратов первых ста чисел
 
 public class Task3 {
     public static void main(String[] args) {
-        double result = 0;
+        int sum = 0;
         for (int i = 1; i <= 100; i++) {
-            result += Math.pow(i, 2);
+            int a = i ^ 2;
+            sum += a;
+            System.out.println("result:  " + sum);
         }
-        System.out.println("Result is " + result);
     }
 }

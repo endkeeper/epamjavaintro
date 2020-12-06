@@ -1,27 +1,20 @@
-package cycles;
+//Даны числовой ряд и некоторое число е. Найти сумму тех челнов ряда, модуль которых больше или равен заданному е.
 
-/**
- * Дан числовой ряд и некоторое число e. Найдите сумму тех членов ряда, модуль которых больше или равен
- * заданному e.  Общий член ряда имеет вид (1 / Math.pow(2, n)) + (1 / Math.pow(3, n)).
- */
+import java.util.Scanner;
 
-// TODO переделать через for
 public class Task5 {
     public static void main(String[] args) {
-        pos(0.01);
-        pos(0.1);
-    }
-
-    static void pos(double e) {
-        double sum = 0;
+        Scanner scn = new Scanner(System.in);
+        System.out.println("Enter e");
+        float e = scn.nextFloat();
         int n = 1;
-        double an = (1 / Math.pow(2, n)) + (1 / Math.pow(3, n));
-        while (Math.abs(an) >= e) {
-            an = (1 / Math.pow(2, n)) + (1 / Math.pow(3, n));
-            sum += an;
+        double series = 1 / Math.pow(2, n) + 1 / Math.pow(3, n);
+        float sum = 0;
+        while (Math.abs(series) >= e) {
+            series = 1 / Math.pow(2, n) + 1 / Math.pow(3, n);
+            sum += series;
             n++;
         }
-        System.out.println(sum);
-        System.out.println();
+        System.out.println("result:  " + sum);
     }
 }
