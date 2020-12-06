@@ -1,24 +1,26 @@
-package branching;
+//Заданы размеры A,B прямоугольного отверстия и размеры x,y,z кирпича. Пройдет ли кирпич в отверстие
 
-/**
- * Заданы размеры отверстия a,b и размеры кирпича x,y,z. Определить, пройдет ли кирпич в
- * отверстие
- */
+import java.util.Scanner;
 
 public class Task4 {
     public static void main(String[] args) {
-        brick(5, 2, 1, 2, 3);
-    }
-
-    private static void brick(int a, int b, int x, int y, int z) {
-        boolean pos1 = a > x && b > y;
-        boolean pos2 = a > z && b > y;
-        boolean pos3 = a > y && b > x;
-
-        if (pos1 || pos2 || pos3) {
-            System.out.println("Brick can go through hole");
+        Scanner scn = new Scanner(System.in);
+        int a, b, x, y, z;
+        System.out.println("size of rectangle: ");
+        a = scn.nextInt();
+        b = scn.nextInt();
+        System.out.println("size of break");
+        x = scn.nextInt();
+        y = scn.nextInt();
+        z = scn.nextInt();
+        boolean firstSide, secondSide, thirdSide;
+        firstSide = (y <= a && x <= b);
+        secondSide = (z <= b && y <= a);
+        thirdSide = (z <= a && x <= b);
+        if (firstSide || secondSide || thirdSide) {
+            System.out.println("break can go through rectangle");
         } else {
-            System.out.println("Brick cant go through hole");
+            System.out.println("break can't go through rectangle");
         }
     }
 }

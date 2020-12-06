@@ -1,37 +1,32 @@
-package branching;
+//Найти max{min(a,b), min(c,d};
 
-/**
- * Найти max{min(a,b), min(c,d)}
- */
+import java.util.Scanner;
 
 public class Task2 {
-    public static void main(String[] args) {
-        result(4, 3, 1, 4);
-    }
-
-    private static void result(int a, int b, int c, int d) {
-        int min1;
-        int min2;
-        int max;
-
+    public static void main() {
+        Scanner scn = new Scanner(System.in);
+        int a, b, c, d;
+        System.out.println("Enter a,b,c,d");
+        a = scn.nextInt();
+        b = scn.nextInt();
+        c = scn.nextInt();
+        d = scn.nextInt();
+        int var1, var2, result;
         if (a > b) {
-            min1 = b;
+            var1 = b;
         } else {
-            min1 = a;
+            var1 = a;
         }
-
         if (c > d) {
-            min2 = d;
+            var2 = d;
         } else {
-            min2 = c;
+            var2 = c;
         }
-
-        if (min2 > min1) {
-            max = min2;
+        if (var1 > var2) {
+            result = var1;
         } else {
-            max = min1;
+            result = var2;
         }
-
-        System.out.println("result is " + max);
+        System.out.println("Result: "+ result);
     }
 }
