@@ -1,19 +1,27 @@
-/**
- * Заданы три точки. Определить, расположены ли они на одной прямой
- */
+//Даны три точки. Определить, будут ли они на одной прямой.
+
+import java.util.Scanner;
 
 public class Task3 {
     public static void main(String[] args) {
-        points(1, 2, 1, 3, 1, 5);
-    }
-
-    static void points(int x1, int y1, int x2, int y2, int x3, int y3) {
-        int statement1 = (x1 - x2) * (y3 - y2);
-        int statement2 = (x3 - x2) * (y1 - y2);
-        if (statement1 == statement2) {
-            System.out.println("points on same lines");
+        Scanner scn = new Scanner(System.in);
+        int x1, x2, x3, y1, y2, y3;
+        System.out.println("First point:");
+        x1 = scn.nextInt();
+        y1 = scn.nextInt();
+        System.out.println("Second point:");
+        x2 = scn.nextInt();
+        y2 = scn.nextInt();
+        System.out.println("Third point:");
+        x3 = scn.nextInt();
+        y3 = scn.nextInt();
+        boolean x = (x1 == x2 && x1 == x3);
+        boolean y = (y1 == y2 && y1 == y3);
+        if (x || y) {
+            System.out.println("All points on same line");
         } else {
-            System.out.println("points on different lines");
+            System.out.println("Points on different lines");
         }
     }
+
 }
