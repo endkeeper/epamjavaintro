@@ -1,35 +1,31 @@
-package arrays_of_arrays;
-
 /*
-Сформировать квадратную матрицу порядка N по правилу и подсчитать количество положительных элементов.
+Сформировать квадратную матрицу порядка n по заданому образцу. N - четное. Подсчитать количество
+положительных элементов в ней.
  */
 
 public class Task7 {
     public static void main(String[] args) {
-        matrix(4);
-        matrix(7);
-        matrix(5);
+        array(10);
+
     }
 
-    private static void matrix(int n) {
-        int pos = 0;
+    static void array(int n) {
         double[][] arr = new double[n][n];
+        int positive = 0;
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {
-                // todo всё еще есть ошибки внутри Math sin
-                arr[i][j] = Math.sin(((i ^ 2) - (j ^ 2)) / n);
+                arr[i][j] = Math.sin((i ^ 2 - j ^ 2) / n);
                 if (arr[i][j] > 0) {
-                    pos++;
+                    positive++;
                 }
             }
         }
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {
-                System.out.printf("%7.2f", arr[i][j]);
+                System.out.print(String.format("%8.2f", (arr[i][j])) + " ");
             }
             System.out.println();
         }
-        System.out.println("Numbers of positive: " + pos);
-        System.out.println();
+        System.out.println("Number of positive elements:  " + positive);
     }
 }

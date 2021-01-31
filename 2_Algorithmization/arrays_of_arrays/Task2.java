@@ -1,34 +1,31 @@
-package arrays_of_arrays;
-
 /*
-Дана квадратная матрица. Вывести на экран элементы, стоящие по диагонали
+Дана квадратная матрица. Вывести на экран элементы, стоящие на диагонали
  */
-
 public class Task2 {
     public static void main(String[] args) {
-        diagonale(new int[][]{
-                {1, 4, 2},
-                {6, 3, 1},
-                {1, 3, 2}});
-        diagonale(new int[][]{
-                {5, 1, -1},
-                {1, -5, 0},
-                {0, 2, 3}});
-        diagonale(new int[][]{
-                {4, 1},
-                {3, 3}});
-        diagonale(new int[][]{
-                {-1, 1, 3, 5},
-                {3, 12, 6, 7},
-                {8, 9, 7, 8},
-                {8, 9, 7, 9}});
-    }
-
-    private static void diagonale(int[][] arr) {
-        int count = arr.length;
-        for (int i = 0; i < count; i++) {
-            System.out.print(arr[i][i] + " ");
+        int n = 3;
+        int[][] arr = new int[n][n];
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = 0; j < arr.length; j++) {
+                arr[i][j] = (int) (Math.random() * 10);
+            }
+        }
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                System.out.print(arr[i][j] + " ");
+            }
+            System.out.println();
         }
         System.out.println();
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                if (i == j) {
+                    System.out.print(arr[i][j] + " ");
+                }
+                if (i + j + 2 == n + 1) {
+                    System.out.print(arr[i][j] + " ");
+                }
+            }
+        }
     }
 }

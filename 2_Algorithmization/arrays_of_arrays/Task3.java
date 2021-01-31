@@ -1,41 +1,41 @@
-package arrays_of_arrays;
-
 /*
-Дана матрица. Вывести k-ю строку и p-й столбец матрицы.
+Дана квадратная матрица. Вывести на экран элементы, стоящие на диагонали
  */
-
 public class Task3 {
     public static void main(String[] args) {
-        array(new int[][]{
-                        {1, 2, 4, 2},
-                        {2, 1, 4, 2},
-                        {1, 7, 4, 3},
-                        {2, 3, 3, 5}},
-                2, 3);
-        array(new int[][]{
-                        {4, 1, 1, 6},
-                        {-3, 0, 2, 6},
-                        {6, 7, 3, 6}},
-                2, 1);
-        array(new int[][]{
-                        {0, 0, 1, 4},
-                        {2, -4, 3, -2}},
-                1, 2);
-    }
-
-    private static void array(int[][] x, int k, int p) {
-        int rowCount = x.length;
-        int columnCount = x[0].length;
-        System.out.print("Row : ");
-        for (int j = 0; j < columnCount; j++) {
-            System.out.print(x[k][j] + "  ");
+        int n = 3;
+        int[][] arr = new int[n][n];
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = 0; j < arr.length; j++) {
+                arr[i][j] = (int) (Math.random() * 10);
+            }
         }
-
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                System.out.print(arr[i][j] + " ");
+            }
+            System.out.println();
+        }
+        int k = 2;
+        int p = 1;
         System.out.println();
-        System.out.print("Column : ");
-        for (int i = 0; i < rowCount; i++) {
-            System.out.print(x[i][p] + "  ");
+        System.out.println("row k");
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                if (i == k) {
+                    System.out.print(arr[i][j] + " ");
+                }
+            }
         }
         System.out.println();
+        System.out.println("column p");
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                if (j == p) {
+                    System.out.print(arr[i][j] + " ");
+                }
+            }
+        }
     }
 }
+

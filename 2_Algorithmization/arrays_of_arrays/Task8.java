@@ -1,47 +1,53 @@
-package arrays_of_arrays;
-
 import java.util.Scanner;
 
 /*
-В числовой матрице поменять местами два столбца любых столбца, т.е. все элементы одного столбца поставить на соответствующие им позиции другого,
-а его элементы второго переместить в первый. Номера столбцов вводит пользователь с клавиатуры.
+В числовой матрице поменять местами два любых столбца. Номера столбцов вводит пользователь с клавиатуры.
  */
 
 public class Task8 {
     public static void main(String[] args) {
-        matrix(4, 3);
-    }
-
-    private static void matrix(int n, int p) {
-        int[][] arr = new int[n][p];
-        for (int i = 0; i < n; i++) {
-            for (int j = 0; j < p; j++) {
-                arr[i][j] = (int) (Math.random() * 100);
-            }
-        }
-        System.out.println("Before:");
-        for (int i = 0; i < n; i++) {
-            for (int j = 0; j < p; j++) {
-                System.out.print(arr[i][j] + " ");
-            }
-            System.out.println();
-        }
+        int column1;
+        int column2;
         Scanner scn = new Scanner(System.in);
         System.out.println("Enter numbers of columns");
-        int column1 = scn.nextInt();
-        int column2 = scn.nextInt();
+        column1 = scn.nextInt();
+        column2 = scn.nextInt();
+        swap(array(4), column1, column2);
+    }
+
+    static int[][] array(int n) {
+        int[][] arr = new int[n][n];
         for (int i = 0; i < n; i++) {
-            int number = arr[i][column1];
-            arr[i][column1] = arr[i][column2];
-            arr[i][column2] = number;
+            for (int j = 0; j < n; j++) {
+                arr[i][j] = (int) (Math.random() * 10);
+            }
         }
-        System.out.println("After:");
+
         for (int i = 0; i < n; i++) {
-            for (int j = 0; j < p; j++) {
+            for (int j = 0; j < n; j++) {
                 System.out.print(arr[i][j] + " ");
             }
             System.out.println();
         }
         System.out.println();
+        return arr;
+    }
+
+    static void swap(int[][] arr, int col1, int col2) {
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = 0; j < arr.length; j++) {
+                if (col1 == j) {
+                    int tmp = arr[i][col2];
+                    arr[i][col2] = arr[i][col1];
+                    arr[i][col1] = tmp;
+                }
+            }
+        }
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = 0; j < arr.length; j++) {
+                System.out.print(arr[i][j] + " ");
+            }
+            System.out.println();
+        }
     }
 }
